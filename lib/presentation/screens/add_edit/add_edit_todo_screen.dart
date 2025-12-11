@@ -77,6 +77,7 @@ class _AddEditTodoScreenState extends State<AddEditTodoScreen> {
           category: _category,
         );
         await provider.updateTodo(updatedTodo);
+        Get.back();
         Get.snackbar(
           'Updated',
           AppStrings.taskUpdated,
@@ -97,6 +98,7 @@ class _AddEditTodoScreenState extends State<AddEditTodoScreen> {
         priority: _priority,
         category: _category,
       );
+      Get.back();
       Get.snackbar(
         'Created',
         AppStrings.taskAdded,
@@ -107,8 +109,6 @@ class _AddEditTodoScreenState extends State<AddEditTodoScreen> {
         borderRadius: AppSizes.radiusM,
       );
     }
-
-    Get.back();
   }
 
   @override
